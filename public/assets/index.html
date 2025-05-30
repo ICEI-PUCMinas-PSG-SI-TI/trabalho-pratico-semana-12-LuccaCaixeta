@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Roteiro de Viagem</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <main class="principal">
+        <header class="cab">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 10px;"> 
+            <i class="fas fa-globe-americas" style="font-size: 28px; color: white;"></i>
+            <i class="fas fa-plane" style="font-size: 20px; transform: rotate(45deg); color: white;"></i>
+            <i class="fas fa-map-marker-alt" style="font-size: 24px; color: white;"></i>
+            <span style="color: white; font-size: 22px; font-weight: bold;">Guia Turístico</span>
+          </div>
+            <nav>
+                <ul class="ul">
+                    <li class="li"><a class="hover1" href="#sobre">Sobre</a></li>
+                    <li class="li"><a class="hover1" href="#dmpDiv">Destinos</a></li>
+                    <li class="li"><a class="hover1" href="#titleDicas">Dicas de Viagem</a></li>
+                    <li class="li"><a class="hover1" href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+              
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navegação</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#sobre">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sobre
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Funcionamento</a></li>
+                      <li><a class="dropdown-item" href="#">Sistema</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Melhores dicas</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Desabilitado</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Pesquise" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+    <section>
+        <div id="sobre">
+        <h1>Bem-vindo ao Guia Turístico</h1>
+        <p>Seja bem-vindo ao nosso Guia Turístico! Aqui você encontra informações completas e dicas valiosas para explorar os melhores destinos ao redor do mundo. Seja para uma viagem de lazer, cultura ou aventura, temos tudo o que você precisa para tornar sua experiência única e inesquecível. Desde atrações imperdíveis até os segredos mais bem guardados de cada lugar, nosso objetivo é ajudar você a planejar e aproveitar ao máximo cada momento. Navegue por nossas seções e descubra o melhor de cada destino!</p>
+        </div>
+    </section>
+
+<div class="dmpMain">
+  <div class="container my-4">
+    <h2 class="text-center">Itens em Destaque</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" id="carousel-inner"></div>
+</div>
+<div class="row" id="card-container"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+<section class="container my-5">
+    <h2 class="text-center mb-4">Explorar Destinos</h2>
+</section>
+<div id="dmpDiv" class="dmpDiv"></div>
+<div class="dicas">
+    <h1 class="titleDicas">Principais Dicas de Viagem</h1>
+        <ul>
+            <li><h3>Planeje com Antecedência:</h3><p>Escolher o destino e o período da viagem com tempo de antecedência pode ajudar a encontrar melhores preços em passagens aéreas e acomodações. Além disso, é sempre bom pesquisar sobre o clima e as atrações locais para aproveitar ao máximo!</p></li>
+            <li><h3>Faça uma Lista de O Que Levar:</h3><p>Não deixe para fazer as malas na última hora. Faça uma lista de tudo o que você precisará e revise antes de viajar. Lembre-se de adaptar as roupas ao clima e de não esquecer itens essenciais, como documentos e carregadores!</p></li>
+            <li><h3>Conheça os Destinos Menos Turísticos:</h3><p>Evite as multidões e explore destinos alternativos. Cidades menores e atrações pouco conhecidas podem oferecer uma experiência mais autêntica e tranquila, além de serem uma ótima forma de descobrir o local de uma maneira única.</p></li>
+            <li><h3>Experimente a Comida Local:</h3><p>Uma das melhores formas de conhecer a cultura de um lugar é através da sua gastronomia. Não deixe de experimentar os pratos típicos e aproveitar mercados, feiras e restaurantes locais.</p></li>
+            <li><h3>Use Transporte Local:</h3><p>Sempre que possível, experimente o transporte público ou alternativas locais como bicicletas e passeios a pé. Além de ser mais barato, você terá uma experiência mais imersiva do destino!</p></li>
+            <li><h3>Reserve Tempo para Relaxar:</h3><p>Apesar de ser tentador tentar fazer tudo em uma viagem, não sobrecarregue seu roteiro. Reserve alguns momentos para descansar e apreciar o ambiente ao redor. Viagem é também sobre aproveitar o momento!</p></li>
+            <li><h3>Esteja Preparado para o Imprevisto:</h3><p>Acontece de planos mudarem durante a viagem. Um voo pode ser cancelado ou o tempo pode não ajudar. Mantenha uma mentalidade flexível e aberta para lidar com imprevistos de maneira tranquila.</p></li>
+            <li><h3>Consulte Sempre os Roteiros Personalizados:</h3><p>Cada viagem é única! Explore os roteiros personalizados que preparamos para você, adaptando o plano de viagem ao seu ritmo, interesses e necessidades.</p></li>
+            <li><h3>Verifique a Documentação Necessária:</h3><p>Não esqueça de verificar se você precisa de vistos, vacinas ou outros documentos para entrar no país de destino. Estar preparado com antecedência evita surpresas no momento da viagem.</p></li>
+        </ul>
+    </div>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+<form action="#" method="post">
+<footer class="footer-personalizado">
+  <div class="sobre-mim">
+    <h5>Sobre mim</h5>
+    <p>Sou Lucca Caixeta Lopes Silva, estudante apaixonado por tecnologia, design e viagens. Desenvolvi este site como um projeto para compartilhar dicas e experiências incríveis pelo mundo. Acredito que viajar transforma vidas, e quero ajudar você a montar roteiros inesquecíveis!</p>
+  </div>
+  <div class="footer-content">
+      <img src="Foto do Lucca.jpg" alt="Foto do Criador" class="foto-criador">
+      <div class="info-criador">
+          <p>Desenvolvido por Lucca Caixeta Lopes Silva</p>
+          <p>Email: lucca200710@icloud.com</p>
+          <p>Localização: Belo Horizonte - MG</p>
+          <div class="footer-links">
+              <a href="https://instagram.com/seuusuario" target="_blank">
+                  <i class="fab fa-instagram"></i> Instagram
+              </a>
+              <a href="https://wa.me/5599999999999" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <p class="copyright">&copy; 2025 Guia Turístico. Todos os direitos reservados.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

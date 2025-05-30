@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Destino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="principal container">
+        <h2 class="text-center mb-4">Cadastro de Destino</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="imagem">URL da Imagem:</label>
+            <input type="text" id="imagem" name="imagem" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="detalhes">Detalhes:</label>
+            <textarea id="detalhes" name="detalhes" required></textarea>
+
+            <label for="recomendado">Recomendado para:</label>
+            <input type="text" id="recomendado" name="recomendado" required>
+
+            <label for="epoca">Melhor Época:</label>
+            <input type="text" id="epoca" name="epoca" required>
+
+            <label for="dias">Duração Ideal (dias):</label>
+            <input type="text" id="dias" name="dias" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

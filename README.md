@@ -5,10 +5,10 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 ## Informações do trabalho
 
-- Nome:
+- Nome: Lucca caixeta Lopes Silva
 - Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Proposta de projeto escolhida: Guia Turístico
+- Breve descrição sobre seu projeto: Site de guia turístico
 
 **Print do testes da API com Postman ou similar**
 

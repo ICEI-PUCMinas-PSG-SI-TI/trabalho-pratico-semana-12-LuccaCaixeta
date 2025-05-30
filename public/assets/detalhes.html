@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Destino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="principal container my-5" id="detalhes-container">
+        <section id="info-gerais" class="mb-5">
+            <h2 class="text-center">Informações Gerais</h2>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img id="detalhe-imagem" src="" alt="Imagem do destino" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h3 id="detalhe-nome"></h3>
+                    <p><strong>Descrição:</strong> <span id="detalhe-descricao"></span></p>
+                    <p><strong>Detalhes:</strong> <span id="detalhe-detalhes"></span></p>
+                    <p><strong>Recomendado para:</strong> <span id="detalhe-recomendado"></span></p>
+                    <p><strong>Melhor época para visitar:</strong> <span id="detalhe-epoca"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fotos-vinculadas">
+            <h2 class="text-center">Fotos Vinculadas</h2>
+            <div class="row mt-4" id="fotos-container"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const destinoId = urlParams.get('id');
+
+    fetch(`http://localhost:3000/destinos/${destinoId}`)
+        .then(res => res.json())
+        .then(destino => {
+            document.getElementById('detalhe-imagem').src = destino.imagem;
+            document.getElementById('detalhe-nome').textContent = destino.nome;
+            document.getElementById('detalhe-descricao').textContent = destino.descricao;
+            document.getElementById('detalhe-detalhes').textContent = destino.detalhes;
+            document.getElementById('detalhe-recomendado').textContent = destino.recomendado;
+            document.getElementById('detalhe-epoca').textContent = destino.epoca;
+
+            const fotos = [
+                { titulo: `Vista aérea de ${destino.nome}`, imagem: destino.imagem },
+                { titulo: `Ponto turístico de ${destino.nome}`, imagem: destino.imagem },
+                { titulo: `Cultura local em ${destino.nome}`, imagem: destino.imagem }
+            ];
+
+            const container = document.getElementById('fotos-container');
+            fotos.forEach(foto => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4 mb-3';
+                col.innerHTML = `
+                    <div class="card">
+                        <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
+                        <div class="card-body">
+                            <h5 class="card-title">${foto.titulo}</h5>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        })
+        .catch(() => {
+            document.getElementById('detalhes-container').innerHTML = `<p class="text-danger text-center">Destino não encontrado.</p>`;
+        });
+</script>
+</body>
+</html>
